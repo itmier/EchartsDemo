@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <h1>数据可视化 - Echarts - Demo</h1>
+        <div class="showTime"></div>
+    </header>
+    <!-- 页面主体 -->
+    <section class="mainbox">
+        <div class="column">
+            <div class="panel bar">
+                <h2>柱形图 - 就业行业</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line">
+                <h2>柱形图 - 就业行业</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie">
+                <h2>柱形图 - 就业行业</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="column">
+            <!-- number模块制作 -->
+            <div class="no">
+                <div class="no-bumber">
+                    <ul>
+                        <li class="timer_one"></li>
+                        <li class="timer_two">6326</li>
+                    </ul>
+                </div>
+                <div class="no-desc">
+                    <ul>
+                        <li>猪头肉需求人数</li>
+                        <li>酱牛肉需求人数</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 地图模块 -->
+            <div class="map">
+                <div class="map-earth"></div>
+                <div class="map-animation"></div>
+                <div class="map-ani-fast"></div>
+                <div class="chart"></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="panel bar">
+                <h2>柱形图 - 就业行业</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line">
+                <h2>柱形图 - 就业行业</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie">
+                <h2>柱形图 - 就业行业</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="js/flexible.js"></script>
+    <!-- 当前时间获取 -->
+    <script src="js/getDate.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script>
+        $('.timer_one').countTo({
+            from: 0,
+            to: 12362,
+            speed: 2400,
+            refreshInterval: 50,
+            formatter: function (value, options) {
+                return value.toFixed(options.decimals);
+            },
+            onUpdate: function (value) {
+                console.debug(this);
+            },
+            onComplete: function (value) {
+                console.debug(this);
+            }
+        });
+        $('.timer_two').countTo({
+            from: 0,
+            to: 36231,
+            speed: 2400,
+            refreshInterval: 50,
+            formatter: function (value, options) {
+                return value.toFixed(options.decimals);
+            },
+            onUpdate: function (value) {
+                console.debug(this);
+            },
+            onComplete: function (value) {
+                console.debug(this);
+            }
+        });
+    </script>
+</body>
+
+</html>
